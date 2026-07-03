@@ -1,0 +1,376 @@
+<!DOCTYPE html><html class="light" lang="es" style="scroll-behavior: smooth; opacity: 0;" data-stitch-anim-opacity="true"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Miriam Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Noto+Serif:ital,wght@0,400;1,400&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#474836",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#a4a58f",
+                        "surface-tint": "#725a42",
+                        "surface-container-high": "#fbe4d2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#484828",
+                        "inverse-surface": "#3b2e22",
+                        "inverse-primary": "#e1c1a4",
+                        "primary-container": "#4b3621",
+                        "on-primary": "#ffffff",
+                        "surface": "#fff8f5",
+                        "secondary-container": "#e6e5b9",
+                        "on-primary-fixed-variant": "#59422c",
+                        "inverse-on-surface": "#ffeee1",
+                        "on-primary-container": "#bd9f83",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "on-secondary-fixed": "#1d1d03",
+                        "on-primary-fixed": "#291806",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "primary-fixed": "#fedcbe",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#e6e5b9",
+                        "tertiary": "#242516",
+                        "on-surface": "#25190f",
+                        "surface-container-low": "#fff1e8",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e4e4cc",
+                        "background": "#fff8f5",
+                        "error-container": "#ffdad6",
+                        "primary": "#33210d",
+                        "surface-dim": "#edd6c4",
+                        "outline-variant": "#d2c4ba",
+                        "on-surface-variant": "#4e453d",
+                        "on-background": "#25190f",
+                        "surface-container-highest": "#f5decd",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#cac99f",
+                        "secondary": "#60603e",
+                        "tertiary-container": "#3a3b2a",
+                        "outline": "#80756c",
+                        "surface-container": "#ffeada",
+                        "surface-bright": "#fff8f5",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#f5decd",
+                        "on-secondary-container": "#666643",
+                        "primary-fixed-dim": "#e1c1a4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "button-text": ["Montserrat"],
+                        "label-accent": ["Noto Serif"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "button-text": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-accent": ["18px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom styles for subtle interactions */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(75, 54, 33, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-surface-tint selection:text-on-primary" data-mode="connect">
+<!-- TopNavBar -->
+<header class="bg-surface/90 dark:bg-surface/90 backdrop-blur-md docked full-width top-0 sticky border-b border-outline-variant/30 dark:border-outline-variant/10 shadow-sm dark:shadow-none z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-max-width mx-auto z-50">
+<div class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary-fixed">Miriam Bakery</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 font-label-accent text-label-accent" href="#">Inicio</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-label-accent text-label-accent" href="#quien-soy">¿Quién soy?</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-label-accent text-label-accent" href="#productos">Productos</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-label-accent text-label-accent" href="#eventos">Eventos/Tartas</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-label-accent text-label-accent" href="#contacto">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="https://wa.me/34662472171" target="_blank" class="scale-95 active:scale-90 transition-transform duration-200 hidden md:flex items-center gap-2 bg-primary-container text-on-primary font-button-text text-button-text px-[32px] py-3 rounded hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:text-primary transition-all">WhatsApp</a>
+<button class="scale-95 active:scale-90 transition-transform duration-200 text-on-surface-variant hover:text-primary hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all p-2 rounded-full"></button>
+<button class="md:hidden text-on-surface-variant p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full min-h-[80vh] flex items-center bg-surface-container px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<div class="absolute inset-0 z-0">
+<img alt="Croissant artesanal" class="w-full h-full object-cover opacity-30 md:opacity-100 md:w-1/2 md:right-0 md:left-auto absolute object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIc6CX-X1O8W3o16YyhAzUUsY1ETR8SHSD25QW5ntJ8KGNUIvzTNK1o1RxpzIXnUegzYoVWX9HJviw071_qJkcNcM9o87AzsoFL6EcygvcYAVY8v03sK36i3ZWyns1e26ZxGpBE6e8QVyskcVy8MtO7VfhD1W8L9CrMmljrD0F4fCS3akxUT-QRsStDjdKltSxyPUuEPO4K5p7LcMP0DnOJTjKaRJqDbaV7FiSpvSkSUR9C3qAa-YzHGK6cuxXT_yBdDatTutdmnMX">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent md:w-2/3 z-10"></div>
+</div>
+<div class="relative z-20 max-w-max-width mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex flex-col justify-center gap-6">
+<span class="font-label-accent text-label-accent italic text-surface-tint">Artesanal</span>
+<h1 class="font-display-lg text-display-lg text-primary text-4xl md:text-[56px] leading-tight">Miriam Bakery - Horneado artesanal</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Sabor auténtico y natural cada día en Lucena.</p>
+<div class="mt-4">
+<button class="bg-primary-container text-on-primary font-button-text text-button-text px-[32px] py-4 rounded hover-lift">
+                            Ver carta
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- ¿Quién soy? Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-background" id="quien-soy">
+<div class="max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 relative rounded-lg overflow-hidden shadow-sm hover-lift">
+<img alt="Interior de la panadería" class="w-full h-auto object-cover aspect-[1.75] rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDueJEeFeU6MdZ9fJ0q54QL_mpBOhpu4bBlS6BtbG3wMSVKHtC2BeDz1uFtFXqzi-A7OrW3RrQzY9uUQa30spd6ssCVjJy4tIL-DEAclPRomVCy8EO9-tlKU-0myFwwM0n1M_GUiAwrp3rWB1j-j3kOmzuVYBzHLtA8C-BA7uqDdIYn-1ELVfcfrx8keyhKGZ9LuNutqTNHa8lKz7MovrUSfRN2lrZwX-Uhza8mzvOFnl8ViXJKSZP4yGR--5WN8GmmI0K-AsyR4M02">
+</div>
+<div class="order-1 md:order-2 flex flex-col gap-6">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">¿Quién soy?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        En Miriam Bakery, horneamos diariamente con pasión y dedicación. Creemos en los ingredientes naturales y en los procesos artesanales. Nuestros productos están libres de aceite de palma, garantizando un sabor puro y saludable. 
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Ven a disfrutar de nuestro acogedor espacio en Lucena, donde el aroma a pan recién horneado y café de especialidad te harán sentir como en casa.
+                    </p>
+<div class="mt-4">
+<span class="inline-flex items-center justify-center px-4 py-1 bg-surface-container-high text-surface-tint rounded-full font-label-accent text-sm italic">Sin aceite de palma</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Novedades Section (Bento Grid) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-max-width mx-auto flex flex-col gap-12">
+<div class="text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Novedades</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Novedad 1 -->
+<div class="group relative rounded-xl overflow-hidden shadow-sm bg-surface hover-lift flex flex-col md:flex-row">
+<div class="w-full md:w-2/5 aspect-square md:aspect-auto">
+<img alt="Brownies" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyE3IhRfl4X6VvwmjAnu9L6MrdVNaamoE_DnJA1DnXiYk4TwZTm9t7YWajw9psU99sG3pAJr2khW70RMeBwyLph6x5_-hmY06B3wSIQUw1iXtChqbVCyJ_m91dDZt55alCTgJ2yIP54LqVHbQAv59IZ_rytE73rOvabnAL6C8Omyoip-OMEsST9gHIBDIjmuL2ANRTGU2CfXW7qtymAGg0bMkIdAyEgM61HW5phIsCtOd309MK2-PfL5tgk6j1U6dHj5zAOIVa8s7z_yk">
+</div>
+<div class="p-8 w-full md:w-3/5 flex flex-col justify-center gap-4 bg-surface-container">
+<h3 class="font-headline-lg-mobile text-xl text-primary font-semibold">Jueves de Brownies</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Brownies irresistibles por solo 3,5€ (bebida incluida). ¡Solo los jueves!</p>
+</div>
+</div>
+<!-- Novedad 2 -->
+<div class="group relative rounded-xl overflow-hidden shadow-sm bg-surface hover-lift flex flex-col md:flex-row">
+<div class="w-full md:w-2/5 aspect-square md:aspect-auto">
+<img alt="Helados" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa9PWsOT-Los_ts6aGs8UKNMVOFdSbwV6eHc7dFeo9B2zHQGtezKGsZArJP6Q-WX-Yp8LgJO8-MLHK8pkcGbXAqj1mcBzmGOwByCD5uFjPiZCwY2M5S7CuvQLhl90naKIILjFgOp_8VxiM2zALiX1YOJcEg_rGZOOtBLrLIlgBlhBcy4z4RtFSI_8ukeW61e_D_OPEHIS62-_ZhOd2iLV_poyybzcfI6awHHTmIbV6JIs2u54q7FlVu8bvxuLBhKpo2MFhjCkcebDM">
+</div>
+<div class="p-8 w-full md:w-3/5 flex flex-col justify-center gap-4 bg-surface-container">
+<h3 class="font-headline-lg-mobile text-xl text-primary font-semibold">Helados de Temporada</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Gelato artesanal con ingredientes frescos y naturales.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categorías de Productos Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-background" id="productos">
+<div class="max-w-max-width mx-auto flex flex-col gap-12">
+<div class="text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Nuestros Productos</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Elaborados a mano, horneados con cariño.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Category Cards -->
+<a class="group block rounded-lg overflow-hidden bg-surface-container-lowest hover-lift p-4 flex flex-col gap-4" href="#">
+<div class="aspect-[1.5] w-full overflow-hidden rounded">
+<img alt="Tartas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI9IZPByc-8XS0hA6DgHuPjbMyJAPw-QJnNFKbyN5V3onMdp6g-FbXNbMgqxsBPU0ukjMMHuXggSCj5I2jL3Eod4EoEXZWVPCHXnOsiR-ias2EZe60syTcStWuWokak0DzPcEjZml_9y-gmd55XIl93BMComkhg0Jpd35Bc_vwyOAaKm_xOWxnq6cNYer1lxti8lEeFZ0qPjhXOR0sCqg2WBuRqjDIpHik6tQeTnopBCq_q3B-yVS2QsUHeZGDTM-8b7N1CwfqnoQJX8M">
+</div>
+<div class="flex justify-between items-center px-2">
+<span class="font-headline-lg-mobile text-lg text-primary font-semibold">Tartas</span>
+<span class="font-label-accent text-sm text-surface-tint group-hover:underline">Ver más</span>
+</div>
+</a>
+<a class="group block rounded-lg overflow-hidden bg-surface-container-lowest hover-lift p-4 flex flex-col gap-4" href="#">
+<div class="aspect-[1.5] w-full overflow-hidden rounded">
+<img alt="Tartas de Queso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS_M5Rb1-5g0ggsfAB9t9CntAWk3Y-RAWWqgwHM9aANUTukMlgszmfxvkrOjJ9fGumenE95QMznDx26FcRBvrRJFdhTAXPBZssKlmTy392prWCetkoQp2mZWN1jnbNq0l5lW-9p6KCpc-4ZRPFuxRqy2UhjCmg4C_PoI-m9xIYb3BkMwt8IIKSl6gyvFeBKUC4bAiFrrDoIxKI9lMgz2w-lpkDO5bN5Btqp70mAGt6-_ockXRsqHXVBaGPurln3KD-jGsoqgtty4fLKYI">
+</div>
+<div class="flex justify-between items-center px-2">
+<span class="font-headline-lg-mobile text-lg text-primary font-semibold">Tartas de Queso</span>
+<span class="font-label-accent text-sm text-surface-tint group-hover:underline">Ver más</span>
+</div>
+</a>
+<a class="group block rounded-lg overflow-hidden bg-surface-container-lowest hover-lift p-4 flex flex-col gap-4" href="#">
+<div class="aspect-[1.5] w-full overflow-hidden rounded">
+<img alt="Bollería" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYqIY7iGhHhV9fUJxkKH9Jccy_SJui6UhXVhVVPa90ZrX0fXz2fEHIyWLqpaAePoonlBjd0FqL3VV0ANaqWCtaY4TIFdL4Gc_wmdb7OxPELkjZjJzfFqeEIbxpTLnXD_OISdRhXzxt-PIDySSnywndvbnqAJnf_Faj97Geo8q9oXJAB1soPmbSabfa0nXQOk2nqsvW54hzR89q7wTxADG_1vBD89utk-cb-bQtmOUXZ79RhhL1ZODThmGXXeaASUL6u-bA7occ5xdftmM">
+</div>
+<div class="flex justify-between items-center px-2">
+<span class="font-headline-lg-mobile text-lg text-primary font-semibold">Bollería</span>
+<span class="font-label-accent text-sm text-surface-tint group-hover:underline">Ver más</span>
+</div>
+</a>
+<a class="group block rounded-lg overflow-hidden bg-surface-container-lowest hover-lift p-4 flex flex-col gap-4" href="#">
+<div class="aspect-[1.5] w-full overflow-hidden rounded">
+<img alt="Brownies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLEeu8xjklWFt0_XBH-c_nvsMZH_UfSEAxXdwNowdbGGCbVs3pTWqT8GiDyoAxqRUFDw-Buewds7X0cyjoqrpB2L-UMS2QQD7dmMpvmauf0_X96EgaW45wgL7qOjFjkYzh6TLRNxf1w1UwDrGi0hZkQuAEIQ6VTkMhZ_rxO9Cdgp6VApWT4ASy5v4iFKGPfNM2CjTyWea_z8p4MxWyO-joMTT1i177phcF1klRSGjqmbspMafn5pHOOowHnnFdqt1oVlUxn0RyL_n8Xow">
+</div>
+<div class="flex justify-between items-center px-2">
+<span class="font-headline-lg-mobile text-lg text-primary font-semibold">Brownies</span>
+<span class="font-label-accent text-sm text-surface-tint group-hover:underline">Ver más</span>
+</div>
+</a>
+<a class="group block rounded-lg overflow-hidden bg-surface-container-lowest hover-lift p-4 flex flex-col gap-4" href="#">
+<div class="aspect-[1.5] w-full overflow-hidden rounded">
+<img alt="Helados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwWdFaaPs5ny_IAJw37ryKCAlruPH70fpRdPGOLprSiS7KM-w5EvhlmWrje3o6y4mXARZlNMmQ2B_QammHujfFpChKoTI3Q5Scrm0_sJBgGtjkTeNvAPIhUXve9kYVn_NQWh5zWfvPTjKdUlB5GQ6zo5e6A8dSkl9Wp7CuG5LAn5ED9D6TDlZtYEGZUAlMaS-ayyDSMZozBmO1ncMs01ibhDUrDve15TBVCQXazMA-ZkC2Mstfp4H9sEpqZmFL7lSgXSTiPmp2dgAzY7U">
+</div>
+<div class="flex justify-between items-center px-2">
+<span class="font-headline-lg-mobile text-lg text-primary font-semibold">Helados</span>
+<span class="font-label-accent text-sm text-surface-tint group-hover:underline">Ver más</span>
+</div>
+</a>
+<a class="group block rounded-lg overflow-hidden bg-surface-container-lowest hover-lift p-4 flex flex-col gap-4" href="#">
+<div class="aspect-[1.5] w-full overflow-hidden rounded">
+<img alt="Cafés y Bebidas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZZgdlKhFSRh0d8_uz4Gh_5f3QoER-_USk2OjWLnzUhwkwiR8oSmxoIf2qDIbRfHiDiUw_MGw28-JI4e7sOXeWnqrm1XyPW0Tes6IdAbCSBdq4rk3VrwHsWnwf9CLvsQa-z5Eyi7mC9-kZ2EDOGBmUMPtT08dy2z0CQIEPcJOnMK773zp1ubpiR4PuopqovioZSuvky4Q5igPm1FIZL13BHmZtBEILCZwgaUjnAb3Mr79AGsFhPJA2oHEdgy0CDeLhkDzLT9n6Hi50MNs">
+</div>
+<div class="flex justify-between items-center px-2">
+<span class="font-headline-lg-mobile text-lg text-primary font-semibold">Cafés y Bebidas</span>
+<span class="font-label-accent text-sm text-surface-tint group-hover:underline">Ver más</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Tartas Personalizadas (Asymmetric Layout) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-high overflow-hidden" id="eventos">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] md:aspect-[3/4] rounded-2xl overflow-hidden shadow-lg relative z-10">
+<img alt="Tarta personalizada" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlA-Hr20QC1a2zQMTEXUGkD7b5bk9oIXJ8wXDtckUonKiXMF3RffXJake4BMgf4WmInAQ8BSOmMan6Cup4uw136KQK3pqqkTU7Ob5FYoKZeQSEZJKhnyiCL-IpQXAybxfIrxiPS8QzKfY0XPctSp1gt_gLu8odQLnpf_2j3jHOBMvQXr9g24skuGPPgFEC0lsHwmZ7F5U-iGepOn5g_RBEPjGrLJNGSQKeEZ4YSrjGewoGyUiecHjKFgmJKHq95sdIWftv3r8bIKgLnRE">
+</div>
+<!-- Decorative background element -->
+<div class="absolute top-12 -left-8 w-full h-full bg-surface-container rounded-2xl z-0"></div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-8 md:pl-8 z-20">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">Momentos Especiales,<br>Tartas Inolvidables</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-lg">
+                         Creamos tartas personalizadas para bodas, cumpleaños y eventos especiales. Cuéntanos tu idea y diseñaremos una tarta única que será el centro de atención de tu celebración.
+                     </p>
+<ul class="flex flex-col gap-4 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint" data-icon="cookie">cookie</span>
+<span class="">Diseños exclusivos</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint" data-icon="celebration">celebration</span>
+<span class="">Para cualquier tipo de evento</span>
+</li>
+</ul>
+<div class="mt-4">
+<a href="https://wa.me/34662472171" target="_blank" class="bg-primary-container text-on-primary font-button-text text-button-text px-[32px] py-4 rounded hover-lift flex items-center gap-2 w-fit">Pide tu tarta por WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Instagram Gallery -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-background text-center flex flex-col gap-12">
+<div class="max-w-max-width mx-auto w-full flex flex-col gap-6 items-center">
+<span class="material-symbols-outlined text-4xl text-surface-tint" data-icon="camera_alt">camera_alt</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Síguenos en el día a día</h2>
+</div>
+<div class="max-w-max-width mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+<div class="aspect-square rounded overflow-hidden shadow-sm hover:opacity-90 transition-opacity">
+<img alt="Instagram 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA16AcgjQUXodR-kq4abZlW-KSd01hm-FOjoOdVjuplYd9MxZepXHY6V1il1KbT8LOh6ph4NA7yDsinfGQo76LpBUHd09ZddDkWFal5LfH2TGBMUHLUD6bnIl8BRjxPDWbHjtqCAykPhIp_29ud2FuCVE8-Y6xG1liEw1qGd6AK2y7XssvEO7XSKygstARuJQ2h3w8CUDULULS0sQaFvKvqb5wDq42-IF2Zq4hhNmzPJPxnjsR1cbru4XREhP1265IHRvlvxs6elB3LbT4">
+</div>
+<div class="aspect-square rounded overflow-hidden shadow-sm hover:opacity-90 transition-opacity">
+<img alt="Instagram 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa9PWsOT-Los_ts6aGs8UKNMVOFdSbwV6eHc7dFeo9B2zHQGtezKGsZArJP6Q-WX-Yp8LgJO8-MLHK8pkcGbXAqj1mcBzmGOwByCD5uFjPiZCwY2M5S7CuvQLhl90naKIILjFgOp_8VxiM2zALiX1YOJcEg_rGZOOtBLrLIlgBlhBcy4z4RtFSI_8ukeW61e_D_OPEHIS62-_ZhOd2iLV_poyybzcfI6awHHTmIbV6JIs2u54q7FlVu8bvxuLBhKpo2MFhjCkcebDM">
+</div>
+<div class="aspect-square rounded overflow-hidden shadow-sm hover:opacity-90 transition-opacity">
+<img alt="Instagram 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIc6CX-X1O8W3o16YyhAzUUsY1ETR8SHSD25QW5ntJ8KGNUIvzTNK1o1RxpzIXnUegzYoVWX9HJviw071_qJkcNcM9o87AzsoFL6EcygvcYAVY8v03sK36i3ZWyns1e26ZxGpBE6e8QVyskcVy8MtO7VfhD1W8L9CrMmljrD0F4fCS3akxUT-QRsStDjdKltSxyPUuEPO4K5p7LcMP0DnOJTjKaRJqDbaV7FiSpvSkSUR9C3qAa-YzHGK6cuxXT_yBdDatTutdmnMX">
+</div>
+<div class="aspect-square rounded overflow-hidden shadow-sm hover:opacity-90 transition-opacity">
+<img alt="Instagram 4" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ-nrcXHLtiXjfspkZjPQ0MsnTwH2veUkMB6IktzfZ8brvNEcH6YHajv_GoysxmNbxzriuMJFOWqTXjk80_7srxKBCr7WKIEMzLXRnw2X0wuKbRLaOAor0mKmHii9C_DiGdMuqC0atZdcpBf00Axw5c9pIj9Fdybn1MT6DMwri7AnGP69CZUmXm7Z-J9JU4D97EL-fnKMTSxrFmSpGkv2J25mExp2HqhZXa6ZL5IjV7xYqtfEbk4SaMIA8RbVIJL5sZnqNpyZyMQr2">
+</div>
+</div>
+<div class="flex justify-center mt-6">
+<a href="https://www.instagram.com/miriambakery.es" target="_blank" class="bg-surface-container text-primary font-button-text text-button-text border border-outline px-[32px] py-3 rounded hover-lift inline-block">Síguenos en Instagram</a>
+</div>
+</section>
+<!-- Contacto y Ubicación -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="contacto">
+<div class="max-w-max-width mx-auto grid grid-cols-1 gap-12">
+<div class="flex flex-col gap-8 items-start"><h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Ven a visitarnos</h2><div class="flex flex-col gap-6 font-body-md text-on-surface-variant items-start"><div class="flex items-start gap-4"><span class="material-symbols-outlined text-surface-tint mt-1" data-icon="location_on">location_on</span><div><p class="font-semibold text-primary">Dirección</p><p class="">Calle Juan Jiménez Cuenca, 23</p><p class="">Lucena, 14900 (frente a Parroquia de Santo Domingo)</p></div></div><div class="flex items-start gap-4"><span class="material-symbols-outlined text-surface-tint mt-1" data-icon="schedule">schedule</span><div><p class="font-semibold text-primary">Horario</p><p class="">Martes a Sábado: 8:00 - 14:00 | 16:30 - 20:30</p><p class="">Domingo: 9:00 - 14:00</p></div></div><div class="flex items-start gap-4"><span class="material-symbols-outlined text-surface-tint mt-1" data-icon="phone">phone</span><div><p class="font-semibold text-primary">Teléfono</p><p class="">+34 662 472 171</p></div></div></div><div class="mt-4"><a href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Juan+Jiménez+Cuenca,+23,+14900+Lucena,+Córdoba,+Spain" target="_blank" class="bg-primary-container text-on-primary font-button-text text-button-text px-[32px] py-3 rounded hover-lift inline-block">Cómo llegar</a></div></div>
+
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-high full-width bg-surface-container-highest dark:bg-surface-container-highest flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-2 flex flex-col gap-4">
+<span class="font-display-lg text-headline-lg text-primary dark:text-primary-fixed">Miriam Bakery</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2026 Miriam Bakery. Calle Juan Jiménez Cuenca, 23, Lucena.</p>
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-col md:flex-row md:justify-end gap-6 md:gap-12 md:items-end">
+<a class="font-label-accent text-label-accent text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-opacity" href="#">Privacidad</a>
+<a class="font-label-accent text-label-accent text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-opacity" href="#">Aviso Legal</a>
+<a class="font-label-accent text-label-accent text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-opacity" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+<!-- Sticky WhatsApp FAB -->
+<div class="fixed bottom-6 right-6 z-50 md:hidden">
+<button class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
